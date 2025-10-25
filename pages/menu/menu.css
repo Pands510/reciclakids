@@ -1,111 +1,38 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial Rounded MT Bold', 'Comic Sans MS', sans-serif;
-}
-
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-    
-    background-image: url('../../game_assets/background/background.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    align-items: flex-start;
 }
 
 .game-scene {
-    position: relative;
-    width: 100%;
-    max-width: 800px; 
-    height: 100vh;
-    max-height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .header-content {
-    position: absolute;
-    top: 2%; 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    z-index: 10; 
-}
-
-.game-title {
-    display: flex;
-    justify-content: center;
-    line-height: 1;
-    margin-bottom: 40px; 
+    position: relative;
 }
 
 .game-logo {
-    width: 100%;
-    max-width: 600px; 
-    height: auto;
+    width: 600px;
+    object-fit: contain;
 }
 
 .character-image {
     width: 200px; 
-    height: auto;
+    object-fit: contain;
+
     position: absolute;
-    top: 110px; 
-    left: 40%;
-    transform: translateX(-150%) rotate(-16deg);
-    z-index: 12; 
+    top: 47%; 
+    left: 0;
+    transform: rotate(-16deg);
 }
 
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 15px; 
-    width: 80%;
-    max-width: 350px;
-    padding-bottom: 10%;
-    z-index: 15;
+    gap: 1rem;
 }
 
-.menu-btn {
-    padding: 20px 36px; 
-    font-size: 1.4em; 
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.1s ease;
-    text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.3);
-}
-
-.btn-green {
-    background-color: #91C129;
-    box-shadow: 0 8px 0 #789c20;
-}
-
-.btn-blue {
-    background-color: #09B4F5;
-    box-shadow: 0 8px 0 #0087c5;
-}
-
-.btn-yellow {
-    background-color: #F5C52F;
-    box-shadow: 0 8px 0 #d9ac20;
-}
-
-.btn-orange {
-    background-color: #ED4941;
-    box-shadow: 0 8px 0 #a93732;
-}
-
-.menu-btn:active {
-    transform: translateY(4px);
-    box-shadow: 0 4px 0;
-}

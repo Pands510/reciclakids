@@ -210,7 +210,8 @@ function verificaVitoria(){
     })
 
     if(limpo && character.papel===0 && character.plastico===0 && character.metal===0){
-        window.alert("Parabéns!!!! Você limpou todo o terreno.")
+        let popup=document.getElementById("vitoriaPopup");
+        popup.style.display='flex';
     }
 }
 

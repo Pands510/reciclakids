@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recicla Kids</title>
+    <title>Reciclakids</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{cursor: pointer;}
+    </style>
 </head>
 <body>
-    <h1>Recicla Kids</h1>
-    <a href="pages/gamePlayScreen/gamePlayScreen.html">Jogar</a>
+    <div class="first_cover">
+        <h1>
+            <img src="./game_assets/logo/logo.png" alt="logo do jogo reciclakids">
+        </h1>
+        <p>Cique em qualquer lugar para continuar</p>
+    </div>
+
+    <script>
+        document.addEventListener("click", ()=>{
+            window.location.href="./pages/menu/menu.html"
+        });
+    </script>
 </body>
 </html>
