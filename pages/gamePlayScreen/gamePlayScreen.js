@@ -5,12 +5,12 @@ const table={
     altura: 5,
     largura: 7,
     trashList: [],
-    renderiza:()=>{
+    renderiza:(a=table.altura, l=table.largura)=>{
 
         let object=document.querySelector("#table");
-        object.style.gridTemplateColumns=`repeat(${table.largura}, 100px)`;
+        object.style.gridTemplateColumns=`repeat(${l}, 100px)`;
 
-        for (let i=0; i < (table.largura*table.altura); i++) {
+        for (let i=0; i < (l*a); i++) {
 
             let element=document.createElement("div");
             element.classList.add("block");
@@ -30,13 +30,13 @@ const table={
 
         switch (tipo) {
             case 0:
-                img.src='../../game_assets/lixo/papel.png';
+                img.src='../../../game_assets/lixo/papel.png';
                 break;
             case 1:
-                img.src='../../game_assets/lixo/sacola.png';
+                img.src='../../../game_assets/lixo/sacola.png';
                 break;
             case 2:
-                img.src='../../game_assets/lixo/lata.png';
+                img.src='../../../game_assets/lixo/lata.png';
                 break;
         
             default:
@@ -86,13 +86,13 @@ const lixeiras={
 
         switch (tipo) {
             case 0:
-                img.src="../../game_assets/lixeiras/lixeira_papel.png"
+                img.src="../../../game_assets/lixeiras/lixeira_papel.png"
                 break;
             case 1:
-                img.src="../../game_assets/lixeiras/lixeira_plastico.png"
+                img.src="../../../game_assets/lixeiras/lixeira_plastico.png"
                 break;
             case 2:
-                img.src="../../game_assets/lixeiras/lixeira_metal.png"
+                img.src="../../../game_assets/lixeiras/lixeira_metal.png"
                 break;
         
         }
@@ -161,10 +161,10 @@ const character={
     papel: 0,
     metal: 0,
     plastico: 0,
-    frontSprite: "../../game_assets/marcio/front.png",
-    backSprite: "../../game_assets/marcio/back.png",
-    rightSprite: "../../game_assets/marcio/right.png",
-    leftSprite: "../../game_assets/marcio/left.png"
+    frontSprite: "../../../game_assets/marcio/front.png",
+    backSprite: "../../../game_assets/marcio/back.png",
+    rightSprite: "../../../game_assets/marcio/right.png",
+    leftSprite: "../../../game_assets/marcio/left.png"
 }
 
 
@@ -180,19 +180,33 @@ function verificaColeta(){
         
         if(character.top===trash.top && character.left===trash.left && trash.onTable){
             
-            trash.object.style.display='none';
-            trash.onTable=false;
+            // trash.object.style.display='none';
+            // trash.onTable=false;
 
-            switch (trash.tipo) {
-                case 0:
-                    character.papel++;
-                    break;
-                case 1:
-                    character.plastico++;
-                    break;
-                case 2:
-                    character.metal++;
-                    break;
+            // switch (trash.tipo) {
+            //     case 0:
+            //         character.papel++;
+            //         break;
+            //     case 1:
+            //         character.plastico++;
+            //         break;
+            //     case 2:
+            //         character.metal++;
+            //         break;
+            // }
+
+            if(trash.tipo===0 && character.metal===0 && character.plastico===0){
+                trash.object.style.display='none';
+                trash.onTable=false;
+                character.papel++;
+            }else if(trash.tipo===1 && character.metal===0 && character.papel===0){
+                trash.object.style.display='none';
+                trash.onTable=false;
+                character.plastico++;
+            }if(trash.tipo===2 && character.papel===0 && character.plastico===0){
+                trash.object.style.display='none';
+                trash.onTable=false;
+                character.metal++;
             }
             
         }
@@ -224,29 +238,6 @@ function verificaVitoria(){
 
 
 
-
-//RENDERIZAÇÃO========================================================================================
-
-//TABULEIRO=========================
-table.renderiza();
-
-//LIXO==============================
-table.addTrash((1*103), (1*103), 0);
-table.addTrash((3*103), (2*103), 2);
-table.addTrash((0*103), (2*103), 1);
-table.addTrash((3*103), (4*103), 2);
-table.addTrash((5*103), (2*103), 1);
-
-
-//LIXEIRAS==========================
-lixeiras.add(0);
-lixeiras.add(1);
-lixeiras.add(2);
-
-
-//PERSONAGEM========================
-character.imgObj.src=character.frontSprite;
-character.imgObj.alt="marcio";
 
 
 

@@ -2,6 +2,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url('../../game_assets/background/bgs1.png');
 }#table{
     display: grid;
 
