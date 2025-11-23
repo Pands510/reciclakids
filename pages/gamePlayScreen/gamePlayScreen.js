@@ -59,7 +59,30 @@ const table={
     }
 }
 
+function sortearNumeroInteiro(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+
+function renderRandonTrash(count, tipo){
+    i=0
+    while(i<count){
+        let x=sortearNumeroInteiro(0, 6);
+        let y=sortearNumeroInteiro(0, 4)
+
+        let free = true
+        table.trashList.forEach((trash)=>{
+            if(trash.top===(y*103) && trash.left===(x*103) || (x===0 && (y===0 || y===1 || y===2))){
+                free = false;
+            }
+        })
+
+        if(free){
+            table.addTrash((x*103), (y*103), tipo);
+            i++;
+        }
+    }
+}
 
 
 //LIXEIRAS=============================================================================================

@@ -3,17 +3,13 @@
 table.renderiza();
 
 //LIXO==============================
-table.addTrash((1*103), (1*103), 0);
-table.addTrash((3*103), (2*103), 2);
-table.addTrash((0*103), (2*103), 1);
-table.addTrash((3*103), (4*103), 2);
-table.addTrash((5*103), (2*103), 1);
+renderRandonTrash(6, 2);
+renderRandonTrash(5, 1);
 
 
 //LIXEIRAS==========================
-lixeiras.add(0);
-lixeiras.add(1);
 lixeiras.add(2);
+lixeiras.add(1);
 
 
 //PERSONAGEM========================
