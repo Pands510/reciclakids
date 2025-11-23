@@ -167,6 +167,28 @@ const character={
     leftSprite: "../../../game_assets/marcio/left.png"
 }
 
+//MENSAGEM========================================================================================
+
+function addMensagem(msg){
+    
+    let msgCont = document.querySelector(".message_cont");
+    let msgObj = document.createElement('div');
+    let p = document.createElement("p");
+
+    p.innerHTML=msg;
+    
+    
+    msgObj.classList.add('message');
+    msgObj.appendChild(p);
+    
+
+    msgCont.appendChild(msgObj);
+    
+
+    setTimeout(()=>{msgObj.style.display='none'}, 6000)
+    
+}
+
 
 
 
@@ -288,26 +310,41 @@ document.addEventListener('keydown', (key)=>{
         lixeiras.list.forEach((bin)=>{
 
             if(bin.top===character.top ){
-             
-                switch (bin.tipo) {
-                    case 0:
+
+
+                if(bin.tipo===0){
+                    if(character.plastico>0){
+                        addMensagem("plásticco vai na lixeira VERMELHA")
+                    }else if(character.metal>0){
+                        addMensagem("metal vai na lixeira AMARELA")
+                    }else{
                         bin.count+=character.papel;
                         bin.placar.innerText=bin.count;
                         character.papel=0;
-                        break;
-                    case 1:
+                    }
+                    
+
+                }else if(bin.tipo===1){
+                    if(character.papel>0){
+                        addMensagem("papel vai na lixeira AZUL")
+                    }else if(character.metal>0){
+                        addMensagem("metal vai na lixeira AMARELA")
+                    }else{
                         bin.count+=character.plastico;
                         bin.placar.innerText=bin.count;
                         character.plastico=0;
-                        break;
-                    case 2:
+                    }
+
+                }if(bin.tipo===2){
+                    if(character.plastico>0){
+                        addMensagem("plásticco vai na lixeira VERMELHA")
+                    }else if(character.papel>0){
+                        addMensagem("papel vai na lixeira AZUL")
+                    }else{
                         bin.count+=character.metal;
                         bin.placar.innerText=bin.count;
                         character.metal=0;
-                        break;
-                
-                    default:
-                        break;
+                    }
                 }
             }
         })

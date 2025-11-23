@@ -1,9 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: url('background.png') no-repeat center/cover;
-}
+
 
 .container {
     width: 100%;
@@ -11,6 +6,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .levels {

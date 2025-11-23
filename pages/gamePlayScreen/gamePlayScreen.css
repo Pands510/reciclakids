@@ -1,3 +1,14 @@
+@keyframes aparece {
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 body{
     display: flex;
     justify-content: center;
@@ -71,4 +82,23 @@ article{
     aspect-ratio: 1;
 
     font-weight: bolder;
+}
+.message_cont > .message{
+    width: 250px;
+    height: fit-content;
+    padding: 1rem;
+
+    animation: aparece 2s 0s forwards;
+    
+}.message_cont{
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: .5rem;
 }
