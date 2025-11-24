@@ -9,6 +9,10 @@ body{
     background-image: url('game_assets/background/background.webp');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+}iframe{
+    height: 100%;
+    width: 100%;
 }
 
 .popup{
