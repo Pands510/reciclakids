@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    background-image: url('../../game_assets/background/bgs1.png');
+    background-image: url('../../game_assets/background/bgs1.webp');
 }#table{
     display: grid;
 
@@ -27,7 +27,7 @@ body{
     padding: .5rem;
     border-radius: 10px; */
 }.block, .bin{
-    background-image: url('../../game_assets/ladrilhos/tijolos.png');
+    background-image: url('../../game_assets/ladrilhos/tijolos.webp');
     background-size: cover;
     background-repeat: no-repeat;
     aspect-ratio: 1;
@@ -51,14 +51,14 @@ article{
 
 
 #character{
-    /*background-image: url("../../game_assets/marcio/front.png");*/
+    /*background-image: url("../../game_assets/marcio/front.webp");*/
     z-index: 2;
     display: flex;
 }#character>img{
     width: 150%;
 }
 .trash{
-    /* background-image: url('https://cdn.pixabay.com/photo/2013/07/12/14/48/crumpled-148834_640.png'); */
+    /* background-image: url('https://cdn.pixabay.com/photo/2013/07/12/14/48/crumpled-148834_640.webp'); */
 
     z-index: 1;
     

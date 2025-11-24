@@ -6,7 +6,7 @@
 }
 body{
     height: 100vh;
-    background-image: url('game_assets/background/background.png');
+    background-image: url('game_assets/background/background.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
