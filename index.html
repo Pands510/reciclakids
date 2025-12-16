@@ -6,21 +6,47 @@
     <title>Reciclakids</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body{cursor: pointer;}
+        .menu-btn{
+            z-index: 5;
+            position: absolute;
+            bottom: 2rem;
+            left: 1rem;
+            width: fit-content;
+            font-size: 4rem;
+            padding: 0;
+            width: 80px;
+            height: 80px;
+        }
     </style>
+    
 </head>
 <body>
-    <div class="first_cover">
-        <h1>
-            <img src="./game_assets/logo/logo.png" alt="logo do jogo reciclakids">
-        </h1>
-        <p>Cique em qualquer lugar para continuar</p>
-    </div>
+    <iframe src="./pages/preload/index.html" frameborder="0"></iframe>
+    <audio src="./game_assets/sounds/ambiente.mp3" loop></audio>
+
+    <button class="menu-btn btn-blue">&#9835;</button>
+
 
     <script>
-        document.addEventListener("click", ()=>{
-            window.location.href="./pages/menu/menu.html"
-        });
+        const btn = document.querySelector(".menu-btn");
+        const audio = document.querySelector("audio")
+
+        btn.addEventListener("click", ()=>{
+
+
+            if(audio.paused){
+
+                audio.play();
+                btn.classList.remove('btn-blue');
+                btn.classList.add("btn-orange");
+            }else{
+
+                audio.pause();
+                btn.classList.remove('btn-orange');
+                btn.classList.add("btn-blue");
+            }
+
+        })
     </script>
 </body>
 </html>

@@ -30,13 +30,13 @@ const table={
 
         switch (tipo) {
             case 0:
-                img.src='../../../game_assets/lixo/papel.png';
+                img.src='../../../game_assets/lixo/papel.webp';
                 break;
             case 1:
-                img.src='../../../game_assets/lixo/sacola.png';
+                img.src='../../../game_assets/lixo/sacola.webp';
                 break;
             case 2:
-                img.src='../../../game_assets/lixo/lata.png';
+                img.src='../../../game_assets/lixo/lata.webp';
                 break;
         
             default:
@@ -104,18 +104,18 @@ const lixeiras={
 
 
         if(tipo===0){
-            img.src="https://cdn-icons-png.flaticon.com/512/5142/5142514.png"
+            img.src="https://cdn-icons-png.flaticon.com/512/5142/5142514.webp"
         }
 
         switch (tipo) {
             case 0:
-                img.src="../../../game_assets/lixeiras/lixeira_papel.png"
+                img.src="../../../game_assets/lixeiras/lixeira_papel.webp"
                 break;
             case 1:
-                img.src="../../../game_assets/lixeiras/lixeira_plastico.png"
+                img.src="../../../game_assets/lixeiras/lixeira_plastico.webp"
                 break;
             case 2:
-                img.src="../../../game_assets/lixeiras/lixeira_metal.png"
+                img.src="../../../game_assets/lixeiras/lixeira_metal.webp"
                 break;
         
         }
@@ -184,10 +184,10 @@ const character={
     papel: 0,
     metal: 0,
     plastico: 0,
-    frontSprite: "../../../game_assets/marcio/front.png",
-    backSprite: "../../../game_assets/marcio/back.png",
-    rightSprite: "../../../game_assets/marcio/right.png",
-    leftSprite: "../../../game_assets/marcio/left.png"
+    frontSprite: "../../../game_assets/marcio/front.webp",
+    backSprite: "../../../game_assets/marcio/back.webp",
+    rightSprite: "../../../game_assets/marcio/right.webp",
+    leftSprite: "../../../game_assets/marcio/left.webp"
 }
 
 //MENSAGEM========================================================================================
